@@ -102,7 +102,7 @@ def create_keypoint_heatmap(image: np.ndarray, keypoints: np.ndarray) -> np.ndar
     for kx, ky, _, vis in keypoints:
         if vis > 0.5:
             cx, cy = int(kx * w), int(ky * h)
-            cv2.circle(heatmap, (cx, cy), 25, vis, -1)
+            cv2.circle(heatmap, (cx, cy), 25, float(vis), -1)
 
     # Normalize
     if heatmap.max() > 0:
