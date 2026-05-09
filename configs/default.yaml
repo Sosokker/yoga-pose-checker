@@ -1,0 +1,42 @@
+# Default configuration for Yoga Pose Classification
+
+# Data
+data_dir: "data/processed/keypoints"
+raw_data_dir: "data/raw"
+output_keypoint_dir: "data/processed/keypoints"
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+# Training
+batch_size: 64
+lr: 0.001
+weight_decay: 0.0001
+max_epochs: 80
+patience: 15
+lr_patience: 8
+lr_factor: 0.5
+num_workers: 0
+device: "mps"
+
+# Model Architecture
+d_model: 128
+hidden_dim: 128
+num_attention_layers: 2
+dropout: 0.2
+use_joint_self_attention: true
+num_self_attention_layers: 2
+num_self_attention_heads: 4
+use_flatten_raw: true
+
+# Augmentation
+augmentation: true
+flip_prob: 0.5
+noise_std: 0.01
+scale_range: [0.9, 1.1]
+rotation_deg: 5.0
+
+# Paths
+checkpoint_dir: "outputs/checkpoints"
+log_dir: "outputs/logs"
+figure_dir: "outputs/figures"

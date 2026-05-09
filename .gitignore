@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data
+data/raw/
+data/processed/
+
+# Model outputs
+outputs/checkpoints/
+outputs/logs/
+outputs/figures/
+outputs/*_history.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Typst
+*.pdf
+
+# Keep directory structure
+!outputs/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/logs/.gitkeep
+!outputs/checkpoints/.gitkeep
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/processed/keypoints/.gitkeep
