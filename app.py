@@ -148,6 +148,8 @@ def load_model():
         use_flatten_raw=True,
     )
 
+    model = model.to(device)
+
     checkpoint_path = "outputs/checkpoints/cross_modal_full_bs64_best.pt"
     if os.path.exists(checkpoint_path):
         state = torch.load(checkpoint_path, map_location=device)
